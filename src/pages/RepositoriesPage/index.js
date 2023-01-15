@@ -1,6 +1,7 @@
 import React from 'react';
 import Filter from '../../components/Filter';
-import Profile from './Profile';
+import Profile from '../../components/Profile';
+
 import { Main, SideBar, Container } from './styles';
 
 const RepositoriesPage = () => {
