@@ -75,20 +75,23 @@ const RepositoriesPage = () => {
   const languages = getLangsFrom(repositories); //fnção que fornece a prop languages
 
   const onFilterClick = (language) => {
-    setCurrentLanguage(language)
-  }
+    setCurrentLanguage(language);
+  };
 
   return (
     <Container>
       <SideBar>
         <Profile user={user} />
-        <Filter languages={languages} />
+        <Filter
+          languages={languages}
+          currentLanguage={currentLanguage}
+          onClick={onFilterClick}
+        />
       </SideBar>
       <Main>
         <Repositories
           repositories={repositories}
           currentLanguage={currentLanguage}
-          onClick={onFilterClick}
         />
       </Main>
     </Container>

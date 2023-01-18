@@ -7,7 +7,7 @@ const Filter = ({ languages, currentLanguage, onClick }) => {
     <Selector
       key={name.toLowerCase}
       color={color}
-      className={currentLanguage === name ?'selected' : ''}
+      className={currentLanguage === name ? ('selected') : ('')}
       onClick={() => onClick && onClick(name)}
       >
       <span>{name}</span>
