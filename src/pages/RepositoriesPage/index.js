@@ -1,6 +1,7 @@
 import React from 'react';
 import Filter from '../../components/Filter';
 import Profile from '../../components/Profile';
+import Repositories from '../../components/Repositories';
 
 import { Main, SideBar, Container } from './styles';
 
@@ -8,10 +9,12 @@ const RepositoriesPage = () => {
   return (
     <Container>
       <SideBar>
-        <Profile/>
-        <Filter/>
+        <Profile />
+        <Filter />
       </SideBar>
-      <Main>Main</Main>
+      <Main>
+        <Repositories />
+      </Main>
     </Container>
   );
 };
