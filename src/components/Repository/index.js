@@ -1,18 +1,32 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Container, Name, Description, Footer, Lang, Link } from './styles';
 
-import { Container, Name, Description, Footer, Lang, Link } from './styles'
-
-const Repository = () => {
+const Repository = ({ repository }) => {
   return (
-    <Container color='#f37272'>
-      <Name>Repository</Name>
-      <Description>Repository Description</Description>
-      <Footer color='#f37272'>
-        <Lang>Repository Lang</Lang>
-        <Link href='https://devsamurai.com.br' target='_blank'>Ver</Link>
+    <Container color="#f37272">
+      <Name>{repository.name}</Name>
+      <Description>{repository.description}</Description>
+      <Footer color="#f37272">
+        <Lang>{repository.language}</Lang>
+        <Link href={repository.html_url} target="_blank">
+          Ver
+        </Link>
       </Footer>
     </Container>
-  )
-}
+  );
+};
 
-export default Repository
+Repository.propTypes = {
+  repository: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      html_url: PropTypes.string.isRequired,
+      language: PropTypes.string,
+    }).isRequired
+  ).isRequired,
+};
+
+export default Repository;
