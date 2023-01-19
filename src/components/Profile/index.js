@@ -1,3 +1,4 @@
+/* eslint-disable react/no-typos */
 import React from 'react';
 import { Avatar, Container, Header, Login, Name, Inner, Data } from './styles';
 import { MdGroup, MdLocationCity, MdWork, MdLink } from 'react-icons/md';
