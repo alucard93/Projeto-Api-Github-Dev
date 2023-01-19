@@ -47,11 +47,11 @@ const theme = {
   },
   fonts: ['Open Sans', 'Arial', 'Helvetica', 'sans-serif'].join(','),
   fontSizes: {
-    small: '.8rem',
-    normal: '1rem',
-    large: '1.2rem',
-    title: '1.3rem',
-    subtitle: '1.25rem',
+    small: '12.8px',
+    normal: '16px',
+    large: '19.2px',
+    title: '20.8px',
+    subtitle: '20px',
   },
   breakpoints: {
     xs: '0',
