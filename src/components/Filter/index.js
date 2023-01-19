@@ -7,8 +7,8 @@ const Filter = ({ languages, currentLanguage, onClick }) => {
     <Selector
       key={name.toLowerCase}
       color={color}
-      className={currentLanguage === name ? ('selected') : ('')}
-      onClick={() => onClick && onClick(name)}
+      className={currentLanguage === name ? ('selected') : ('')}    //lógica cor = card(comparo a info que está no array language com a inf setada no click)
+      onClick={() => onClick && onClick(name)}                      //se existir
       >
       <span>{name}</span>
       <span>{count}</span>
